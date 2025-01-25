@@ -5,17 +5,19 @@ import { useState } from "react";
 
 export { ErrorBoundary } from "expo-router";
 
+const suggestedUrls = ["pillarvalley.expo.app", "yelp.com", "joinswsh.com"];
+
 export default function ClipFinder() {
   const [url, setUrl] = useState("");
   const [clipIds, setClipIds] = useState<string[]>([]);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<Error | null>(null);
 
-  const handleLookup = async () => {
+  const handleLookup = async (input = url) => {
     setLoading(true);
-    console.log("lookup", url);
+    console.log("lookup", input);
     try {
-      const ids = await lookupClipAsync(url);
+      const ids = await lookupClipAsync(input);
       setClipIds(ids);
       setError(null); // Clear any previous errors
     } catch (error) {
@@ -47,16 +49,16 @@ export default function ClipFinder() {
           value={url}
           onChange={(e) => setUrl(e.target.value)}
           className="w-full"
-          onSubmit={handleLookup}
+          onSubmit={() => handleLookup()}
         />
-        <Button onClick={handleLookup} disabled={loading}>
+        <Button onClick={() => handleLookup()} disabled={loading}>
           {loading ? "Loading..." : "Lookup"}
         </Button>
       </div>
       {error && <div className="text-red-500 mb-4">{error.message}</div>}
       <div>
         {clipIds.length > 0 && (
-          <ul className="list-disc pl-5">
+          <ul className="list-disc pl-5 mb-6">
             {clipIds.map((id) => (
               <li key={id}>
                 <a
@@ -71,6 +73,23 @@ export default function ClipFinder() {
             ))}
           </ul>
         )}
+      </div>
+      <div className="mb-6">
+        <h2 className="text-lg font-semibold mb-2">Suggested</h2>
+        <div className="flex flex-wrap gap-2">
+          {suggestedUrls.map((suggestedUrl) => (
+            <button
+              key={suggestedUrl}
+              onClick={() => {
+                setUrl(suggestedUrl);
+                handleLookup(suggestedUrl);
+              }}
+              className="bg-blue-100 text-blue-700 px-3 py-1 rounded hover:bg-blue-200"
+            >
+              {suggestedUrl}
+            </button>
+          ))}
+        </div>
       </div>
     </div>
   );

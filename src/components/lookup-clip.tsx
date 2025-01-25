@@ -12,8 +12,8 @@ export async function lookupClipAsync(url: string): Promise<string[]> {
 
   // Define possible locations for the apple-app-site-association file
   const locations = [
-    `${baseUrl}/apple-app-site-association`,
     `${baseUrl}/.well-known/apple-app-site-association`,
+    `${baseUrl}/apple-app-site-association`,
   ];
 
   // Attempt to download the apple-app-site-association file from both locations
