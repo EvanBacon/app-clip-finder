@@ -38,7 +38,7 @@ export default function ClipFinder() {
             className="h-8 w-8 mr-3 dark:filter dark:invert"
           />
           <div>
-            <h1 className="text-2xl font-bold">Clip Finder</h1>
+            <h1 className="text-2xl font-bold">App Clip Lookup</h1>
           </div>
         </div>
       </div>

@@ -1,3 +1,3 @@
-# Expo Icon Search
+# Expo App Clip Lookup
 
-Search for icons in @expo/vector-icons using this Expo Router website! https://icons.expo.app/
+Search for App Clips that are linked to a website. Built with Expo Router and React Server Components https://appclip.expo.app/
