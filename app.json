@@ -1,0 +1,23 @@
+{
+  "expo": {
+    "scheme": "expo-icons",
+    "userInterfaceStyle": "automatic",
+    "orientation": "default",
+    "platforms": ["web"],
+    "web": {
+      "output": "server",
+      "favicon": "./assets/favicon.png"
+    },
+    "plugins": ["expo-router"],
+    "experiments": {
+      "reactServerFunctions": true
+    },
+    "name": "icons",
+    "slug": "icons",
+    "extra": {
+      "eas": {
+        "projectId": "a684c933-4a3a-48ae-bc55-cd138eb38299"
+      }
+    }
+  }
+}

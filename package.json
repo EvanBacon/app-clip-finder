@@ -1,0 +1,49 @@
+{
+  "name": "icon-explore",
+  "version": "1.0.0",
+  "main": "expo-router/entry",
+  "scripts": {
+    "start": "expo start",
+    "web": "expo start --web",
+    "deploy": "npx expo export -p web && EXPO_STAGING=1 eas deploy --prod",
+    "lint": "eslint ."
+  },
+  "dependencies": {
+    "@radix-ui/react-dialog": "^1.1.1",
+    "@radix-ui/react-dropdown-menu": "^2.1.1",
+    "@radix-ui/react-select": "^2.1.1",
+    "@radix-ui/react-slot": "^1.1.0",
+    "@tanstack/react-virtual": "^3.10.8",
+    "class-variance-authority": "^0.7.0",
+    "clsx": "^2.1.1",
+    "expo": "^52.0.27",
+    "expo-constants": "~17.0.4",
+    "expo-linking": "~7.0.4",
+    "expo-router": "~4.0.17",
+    "expo-splash-screen": "~0.29.21",
+    "expo-status-bar": "~2.0.1",
+    "lucide-react": "^0.446.0",
+    "react": "18.3.1",
+    "react-colorful": "^5.6.1",
+    "react-dom": "18.3.1",
+    "react-native": "0.76.6",
+    "react-native-reanimated": "~3.16.1",
+    "react-native-safe-area-context": "4.12.0",
+    "react-native-screens": "~4.4.0",
+    "react-native-web": "~0.19.13",
+    "react-server-dom-webpack": "19.0.0-rc-6230622a1a-20240610",
+    "tailwind-merge": "^2.5.2",
+    "tailwindcss": "^3.4.0",
+    "tailwindcss-animate": "^1.0.7"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.20.0",
+    "@types/react": "~18.3.12",
+    "autoprefixer": "^10.4.16",
+    "eslint": "^8.57.0",
+    "eslint-config-expo": "~8.0.1",
+    "postcss": "^8.4.32",
+    "typescript": "~5.3.3"
+  },
+  "private": true
+}
