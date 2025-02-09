@@ -1,11 +1,31 @@
+"use dom";
+
 import { lookupClipAsync } from "@/components/lookup-clip";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { useState } from "react";
 
-export { ErrorBoundary } from "expo-router";
+import "../global.css";
 
-const suggestedUrls = ["pillarvalley.expo.app", "yelp.com", "joinswsh.com"];
+// export { ErrorBoundary } from "expo-router";
+
+const suggestedUrls = [
+  "pillarvalley.expo.app",
+  "yelp.com",
+  "joinswsh.com",
+
+  "toasttab.com",
+  "opentable.com",
+  "ubereats.com",
+  "cash.app",
+  "online.citi.com",
+  "geico.com",
+  "calm.com",
+  "georgegarside.com",
+  "maps.google.com",
+  "goodrx.com",
+  "honkmobile.com",
+];
 
 export default function ClipFinder() {
   const [url, setUrl] = useState("");
