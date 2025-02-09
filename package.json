@@ -5,7 +5,9 @@
   "scripts": {
     "start": "expo start",
     "web": "expo start --web",
-    "lint": "eslint ."
+    "lint": "eslint .",
+    "predeploy": "expo export -p web",
+    "deploy": "eas deploy"
   },
   "dependencies": {
     "@radix-ui/react-dialog": "^1.1.1",
